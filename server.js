@@ -53,7 +53,7 @@ hbs.registerHelper('screamIt',(text)=>{
 app.get('/',(req,res)=>{
   res.render('home.hbs',{
     pageTitle: 'Home Page',
-    welcomeMessage: 'Welcome to my website'
+    message: 'Welcome to my website'
   });
 });
 
@@ -64,12 +64,25 @@ app.get('/bad',(req,res)=>{
 });
 
 app.get('/about',(req,res)=>{
-  res.render('home.hbs',{
+  res.render('about.hbs',{
     pageTitle: 'About Page',
-    welcomeMessage: 'About my website'
+    message: 'About my website'
   });
 });
 
+app.get('/portfolio',(req,res)=>{
+  res.render('portfolio.hbs',{
+    pageTitle: 'Portifolio Page',
+    message: 'My projects portifolio'
+  });
+});
+
+app.get('/study',(req,res)=>{
+  res.render('study.hbs',{
+    pageTitle: 'Studies Page',
+    message: 'My studies'
+  });
+});
 // =========================================
 
 // Porta servidor
